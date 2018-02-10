@@ -6,39 +6,162 @@
     <!-- TODO: meta description -->
     <link rel="stylesheet" href="static/css/style.css">
     <script src="static/js/quarter.js"></script>
+    <style>
+    :root { --bg: #fdfdfd; }
+    
+    .post > .head {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #introduction {
+        flex-basis: 50%;
+        text-align: center;
+        margin: 0 2em;
+        font-family: "Times New Roman";
+        font-size: 1.2em;
+    }
+    #introduction h2 {
+        font-size: 1.8em;
+        margin-bottom: 0;
+        color: black;
+    }
+    #introduction p > a {
+        font-family: var(--sans);
+        font-size: 1.6rem;
+        display: block;
+        padding: 1em;
+        background-color: #337bb6;
+        color: white;
+    }
+    #introduction p > a:hover {
+        background-color: #006096;
+        text-decoration: none;
+    }
+    </style>
 </head>
 <body>
     <header id="header" class="stretch">
         <div>
-            <h1 id="title">Quarter.</h1>
-            <p id="description">The&nbsp;local&nbsp;social&nbsp;network.</p>
+            <h1 id="title">Quarter</h1>
+            <p id="description">– a neighborhood for your community.</p>
         </div>
     </header>
     <div id="page">
-        <main>
-            <section id="pitch">
-                <h2 class="purple">Your group’s home on the internet</h2>
-                <p><b>Quarter</b> is a decentralized, privacy-minded, user-friendly and free social network.</p>
-                <p class="button-container center"><a class="button blue" href="create">Create your home</a></p>
-            </section>
-            <!-- TODO: screenshot -->
-            <section id="info">
-                <h3>What’s a quarter? What’s a home?</h3>
-            </section>
-            <footer>
-                <p>
-                    Created by John Ankarström.
-                    <a href="https://vimeo.com/76602135">Graphics</a> created by Florent Remize for Parallel.
-                </p>
-            </footer>
+        <div id="introduction">
+            <h2>Your&nbsp;group’s&nbsp;home on&nbsp;the&nbsp;internet.</h2>
+            <p>Quarter is a <i>decentralized</i>, <i>encrypted</i>, <i>privacy-minded</i> and <i>user-friendly</i> social network.
+            <p><a href="create/">Create a home for your group</a>
+
+            <h2>Powered by free software.</h2>
+            <p>Quarter is <i>free</i> as in freedom, putting <i>you</i> in charge instead of multi-national corporations.
+            <p><a href="https://github.com/jocap/quarter">Check out the code</a>
+        </div>
+        <main id="timeline">
+            <article class="post">
+                <div class="head">
+                    <aside class="meta">
+                        <img src="static/media/john.jpg" class="picture">
+<div>
+                        <div>
+                            <a href="https://john.ankarstrom.se/" class="author">John Ankarström</a>
+                            <time class="time">February 10, 2018 – 13:28</time>
+</div>
+                        </div>
+                    </aside>
+                    <div class="content">
+                        <p>A quarter is divided into small communities called <i>homes</i>. These are personal social networks for local groups, designed as an alternative to Facebook chats and groups.
+                    </div>
+                </div>
+                <div class="tail">
+                    <article class="comment">
+                        <aside class="meta">
+                            <img src="static/media/default-128.png" class="picture">
+<div>
+                            <div>
+                                <a href="#" class="author">Alexander</a>
+                                <time class="time">14:02</time>
+</div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <p>That's pretty cool! How do I create a home, and how do I get my friends to join it?
+                        </div>
+                    </article>
+                    <article class="comment">
+                        <aside class="meta">
+                            <img src="static/media/john.jpg" class="picture">
+<div>
+                            <div>
+                                <a href="https://john.ankarstrom.se/" class="author">John</a>
+                                <time class="time">14:05</time>
+</div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <p>Thanks! Homes can be created by anyone, on any server running the Quarter software, and can be joined by whoever knows the group's web address.
+                        </div>
+                    </article>
+                    <article class="comment">
+                        <aside class="meta">
+                            <img src="static/media/default-128.png" class="picture">
+<div>
+                            <div>
+                                <a href="#" class="author">David</a>
+                                <time class="time">14:12</time>
+</div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <p>What about privacy? How can I trust the operator of the server not to read my posts?
+                        </div>
+                    </article>
+                    <article class="comment">
+                        <aside class="meta">
+                            <img src="static/media/john.jpg" class="picture">
+<div>
+                            <div>
+                                <a href="https://john.ankarstrom.se/" class="author">John</a>
+                                <time class="time">14:16</time>
+</div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <p>Actually, that's the great thing about Quarter: you don't have to trust the server operator. All of your posts are encrypted in your web browser and only then uploaded to the server. This means that the content of your posts is unreadable to the server operator.
+                        </div>
+                    </article>
+                    <article class="comment">
+                        <aside class="meta">
+                            <img src="static/media/default-128.png" class="picture">
+<div>
+                            <div>
+                                <a href="#" class="author">David</a>
+                                <time class="time">14:21</time>
+</div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <p>Encryption – does that mean that I need to remember some sort of key to unlock the home?
+                        </div>
+                    </article>
+                    <article class="comment">
+                        <aside class="meta">
+                            <img src="static/media/john.jpg" class="picture">
+<div>
+                            <div>
+                                <a href="https://john.ankarstrom.se/" class="author">John</a>
+                                <time class="time">14:16</time>
+</div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <p>That's another great thing about Quarter :-) The encryption key is contained within the home's address – in fact, a home's key is the same as its name.
+                            <p>In the address <code>https://quarter.group/#/my-own-home</code>, the key is "my-own-home", but because this part of the address is hidden behind a <code>#</code> symbol, it is never transmitted to the server.
+                            <p>Instead, it is used to unlock the home directly in your web browser, via JavaScript.
+                        </div>
+                    </article>
+                </div>
+            </article>
         </main>
-        <aside id="sidebar">
-            <ul>
-                <li><a href="about">About Quarter</a></li>
-                <li><a href="privacy">Privacy</a></li>
-                <li><a href="https://github.com/jocap/quarter">GitHub repository</a></li>
-            </ul>
-        </aside>
     </div>
     <div id="background"></div>
 </body>
