@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/:home/members/new', to: 'members#new', as: :new_member
+  post '/:home/members/new', to: 'members#create', as: :create_member
+  # these should probably be at /:home/ later
 end
