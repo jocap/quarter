@@ -29,38 +29,5 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello!"
-
-  home: "Home"
-  member: "Member"
-
-  username: "Username"
-  password: "Password"
-
-  tos: "Terms of service"
-  i_accept: "I accept the terms of service"
-  log_in: "Log in"
-  create_account: "Create account"
-
-  your_new_home: "Your new home on the internet"
-
-  helpers:
-    label:
-      member:
-        password: "Password"
-
-  activerecord:
-    models:
-      home: "Home"
-      member: "Member"
-      post: "Post"
-      comment: "Comment"
-    attributes:
-      member:
-        clearance: "Security clearance"
-        blocked: "Blocked"
-        username: "Username"
-        display_name: "Display name"
-        description: "Description"
-        email: "E-mail address"
+ru:
+  hello: "Привет!"

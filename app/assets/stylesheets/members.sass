@@ -1,0 +1,28 @@
+div.field_with_errors
+    display: inline-block
+    background-color: #E4B8B8
+
+
+form#new_member
+    $spacing: 0.4em
+    display: flex
+    flex-direction: column
+    .table
+        display: table
+        // background: #f0f0f0
+        // padding: 1em
+        .row
+            display: table-row
+            div:first-child
+                text-align: right
+            .label, .input
+                display: table-cell
+                vertical-align: middle
+                padding: $spacing
+            .field_with_errors
+                margin: $spacing * -1
+                padding: $spacing
+            .input .field_with_errors
+                background-color: inherit
+    .submit
+        margin-top: 1em

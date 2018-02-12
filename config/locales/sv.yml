@@ -1,0 +1,87 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+sv:
+  hello: "Hej!"
+
+  home: "Hem"
+  member: "Medlem"
+
+  username: "Användarnamn"
+  password: "Lösenord"
+
+  tos: "Användarvillkor"
+  log_in: "Logga in"
+  create_account: "Skapa konto"
+
+  your_new_home: "Ditt nya hem på internet"
+
+
+  helpers:
+    label:
+      member:
+        password: "Lösenord"
+        terms_of_service: "Jag accepterar användarvillkoren"
+
+  errors:
+    format: ! "%{attribute} %{message}"
+    messages:
+      blank: "saknas"
+      accepted: "måste accepteras"
+      required: "måste existera"
+
+  activerecord:
+    models:
+      home:
+        one: "Hem"
+        other: "Hem"
+      member:
+        one: "Medlem"
+        other: "Medlemmar"
+      post:
+        one: "Inlägg"
+        other: "Inlägg"
+      comment:
+        one: "Kommentar"
+        other: "Kommentarer"
+    attributes:
+      member:
+        home: "Hem"
+        clearance: "Säkerhetsnivå"
+        blocked: "Blockerad"
+        username: "Användarnamn"
+        display_name: "Visningsnamn"
+        description: "Beskrivning"
+        email: "E-postadress"
+
+        password: "Lösenord"
+        terms_of_service: "Användarvillkoren"
+

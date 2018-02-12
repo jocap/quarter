@@ -5,7 +5,7 @@ class MembersController < ApplicationController
 
   def create
     @member = Member.new params.require(:member)
-                           .permit(:home, :username, :password, :display_name,
+                           .permit(:home_id, :username, :password, :display_name,
                                    :email, :terms_of_service)
 
     @member.username.downcase!

@@ -1,0 +1,13 @@
+<% if given %>
+  <div class="<%= type %>">
+    <% if given.respond_to? :each %>
+      <ul>
+        <% for message in given %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <%= given %>
+    <% end %>
+  </div>
+<% end %>

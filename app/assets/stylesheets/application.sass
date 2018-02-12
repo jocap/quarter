@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$bg:    #f0f0f0
+$white: #fdfdfd
+$black: #111111
+$serif: "Noto Serif", "DejaVu Serif", "Droid Serif", Georgia, "Times New Roman", Times, serif
+$sans:  "Segoe UI", "Lucida Grande", "DejaVu Sans", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif
+
+html
+    font-size: 62.5%
+    box-sizing: border-box
+
+*, *:before, *:after
+    box-sizing: inherit
+
+body
+    font: 1.2rem/1.4 $sans
+    color: $black
+    margin: 0
+    background-color: $bg
+    -webkit-text-size-adjust: none
+
+#wrapper
+    margin: 1em
+
+// Notices
+
+.notice
+    background-color: #E5E591
+    padding: 1em
+.alert
+    background-color: #FF9191
+body > .notice, .alert
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+.notice, .alert
+    ul
+        padding: 0
+        margin: 0
+        list-style-type: none
+        li
+            padding: 0.75em 1em
+            &:nth-child(odd)
+                background: rgba(0, 0, 0, 0.1)
+
+// Basic elements
+
+h1, h2, h3
+    font-family: $serif
+
+a
+    color: #3949ab
+    text-decoration: none
+
+a:hover
+    text-decoration: underline
+    text-decoration-color: #ccc
+
+// Functions
+
+.stretch, .stretch *
+    width: 100%
