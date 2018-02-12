@@ -1,4 +1,10 @@
-<h2><%= @home %> – <%= tu :your_new_home %></h2>
+<h2><i data-encrypted><%= @home.name %></i> – <%= tu :your_new_home %></h2>
+
+<% if @home.description %>
+<div id="home_description" data-encrypted>
+    <%= @home.description %>
+</div>
+<% end %>
 
 <%= form_for @member,
              url: create_member_path(@member, home_id: params['home_id']) do |f| %>

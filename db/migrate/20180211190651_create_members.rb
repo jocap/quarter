@@ -3,11 +3,11 @@ class CreateMembers < ActiveRecord::Migration[5.1]
     create_table :members do |t|
       t.references :home, foreign_key: true
 
-      t.integer :clearance, null: false, limit: 5, default: 0
+      t.integer :clearance, limit: 5, default: 0
       # 0 = no admin access
       # 5 = full admin access
 
-      t.boolean :blocked, null: false, default: false
+      t.boolean :blocked, default: false
 
       t.string :username, null: false
 
