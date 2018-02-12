@@ -14,6 +14,7 @@ class MembersController < ApplicationController
     @member.username.downcase!
 
     if @member.save
+      flash[:notice] = "Account created successfully!" # TODO: i18n
       render plain: "Success"
     else
       flash.now.alert = @member.errors.full_messages
