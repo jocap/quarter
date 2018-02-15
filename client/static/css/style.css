@@ -2,7 +2,6 @@
     --width: 60rem;
     --spacing: 3em;
     --bg: #f0f0f0;
-    --white: #fdfdfd;
     --sans: "DejaVu Sans", "Lucida Grande", "Segoe UI", "Lucida Sans Unicode", sans-serif;
     --serif: serif;
 }
@@ -18,18 +17,13 @@ html {
 
 body {
     font: 1.6rem/1.4 var(--sans);
-    color: #111;
     background: var(--bg);
     margin: 0;
     -webkit-text-size-adjust: none;
 }
 
-h1, h2, h3 {
-    font-family: var(--serif);
-}
-
 a {
-    color: #3949ab;
+    color: #5c3566;
     text-decoration: none;
 }
 a:hover {
@@ -37,14 +31,44 @@ a:hover {
     text-decoration-color: #ccc;
 }
 
+/** Background */
+
+#background {
+    width: var(--width);
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: calc(var(--width) * -0.5);
+    background-color: #fdfdfd;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
 /** Classes */
 
+:not(html):not(body):not(main):not(header)
+:not(section):not(article):not(footer):not(div) {
+    max-width: var(--width);
+    margin-left: auto;
+    margin-right: auto;
+}
 .stretch, .stretch * { width: 100%; }
 
-/** Layout */
+.center { text-align: center; }
+.blue { background-color: hsl(144, 20%, 49%); color: #fdfdfd; }
+.button.blue:hover { background-color: hsl(144, 20%, 39%); }
+.button.blue:active { background-color: hsl(144, 20%, 29%); }
 
-#page {
-    display: flex;
+.button {
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.button:hover { text-decoration: none; }
+.button-container {
+    margin: 2em auto;
 }
 
 /** Elements */
@@ -62,88 +86,60 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 #header > div {
-    color: var(--white);
+    color: #fdfdfd;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1em 1.5em;
 }
 #header > div > * { display: inline; }
-
-#description { white-space: pre; }
-
-/*** Post */
-
-.post > .head, .post > .tail > article {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+#title {
+    margin-top: 0;
+    font-family: var(--serif);
 }
 
-.post > div {
-    padding: 1em;
-    margin: 0 1em;
-    font-size: 1.2rem;
-    background: var(--white);
-    border: 1px solid #ccc;
-}
-.post > .head { margin-top: 1em; }
-.post > .tail {
-    margin-top: -1px;
-    border-top: none;
-    padding: 0;
-}
+/*** Layout */
 
-.meta {
+#page {
+    --sidebar-width: calc(calc(100% - var(--width)) / 2);
+    max-width: calc(var(--width) + var(--sidebar-width));
     display: flex;
-    margin: 0 -0.5em;
+    flex-flow: row-reverse wrap;
+    justify-content: flex-start;
+    min-height: 100%;
+    
 }
-.meta > * {
-    margin: 0 0.5em;
+#page > * {
+    flex: none;
 }
-.meta .picture {
-    max-height: 3.5rem;
+
+section, footer {
+    padding: 0 1em;
 }
-.meta .author {
+
+/** Sidebar */
+
+#sidebar {
+    flex-basis: calc(100% - var(--width));
+    color: #fdfdfd;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+#sidebar ul li:nth-of-type(1) a { background-color: rgba(0, 0, 0, 0.5); }
+#sidebar ul li:nth-of-type(2) a { background-color: rgba(0, 0, 0, 0.4); }
+#sidebar ul li:nth-of-type(3) a { background-color: rgba(0, 0, 0, 0.3); }
+#sidebar ul li:nth-of-type(4) a { background-color: rgba(0, 0, 0, 0.2); }
+#sidebar ul li:nth-of-type(5) a { background-color: rgba(0, 0, 0, 0.1); }
+#sidebar ul li a {
+    color: inherit;
+    text-decoration: none;
     display: block;
-    font-weight: bold;
-    white-space: pre;
+    width: 100%;
+    padding: 1em;
 }
-.meta .time {
-    color: #666;
+#sidebar ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }
-
-.post .content {
-    clear: left;
-}
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6,
-.content p,
-.content blockquote,
-.content ol,
-.content ul {
-    margin: 0.8em 0;
-}
-.content > *:last-child { margin-bottom: 0; }
-
-/**** Comment */
-
-.comment {
-    display: flex;
-    flex-flow: row-reverse nowrap;
-    justify-content: space-between;
-    margin: 0;
-    border-left: 0.5em solid #ccc;
-    border-top: 1px solid #ccc;
-    background-color: #f8f8f8;
-}
-
-.comment > * { padding: 1em; }
-.comment .meta {
-    flex-direction: row-reverse;
-    text-align: right;
-    //border-left: 1px dotted #ccc;
-}
-.comment .content { margin-right: 1em; }
-.comment .content > *:first-child { margin-top: 0; }
