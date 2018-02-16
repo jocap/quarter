@@ -1,4 +1,6 @@
 class HomesController < ApplicationController
+  before_action :disable_indexing
+
   def index
   end
 
