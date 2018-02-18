@@ -11,5 +11,9 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require vue
+//= require jquery
+//= require intercooler
+//= require sjcl
+//= require commonmark
+//= require quarter
 //= require_tree .
