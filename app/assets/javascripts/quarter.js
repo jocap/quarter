@@ -17,17 +17,26 @@ class Quarter {
 
     static check_hash() {
         if (Quarter.key === undefined) {
-            if (window.location.toString().includes('#')) {
+            if (window.location.href.includes('#')) {
                 // Invalid hash format -> display error
                 Quarter.error('Improper hash')
             } else {
                 // No hash -> display front page
             }
-        }
+        } else if (Quarter.key !== Quarter.last_key) {
+            // Home slug has changed
+            Quarter.note('Loading home: ' + Quarter.key)
 
+
+        }
+        Quarter.last_key = Quarter.key
     }
 
     static error(message) {
+        alert(message)
+    }
+
+    static note(message) {
         alert(message)
     }
 
